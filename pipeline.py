@@ -47,7 +47,7 @@ def process_attendance(teams_csv_path, directory_csv_path):
 
 def main():
     # File Paths
-    teams_csv = "Input/eeting ABC UpdateCommitee DEF #5 - Attendance report 6-08-26.csv"
+    teams_csv = "Input/Meeting ABC UpdateCommittee DEF #5 - Attendance report 6-08-26.csv"
     master_dir = "Input/directory.csv"
     template_path = "MoM_Template.docx"
     json_data_path = "Input/transcript_data.json"
