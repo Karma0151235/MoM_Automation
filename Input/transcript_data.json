@@ -1,0 +1,34 @@
+{
+    "NAME_OF_MEETING": "ABC Update",
+    "TYPE_OF_MEETING": "Committee DEF",
+    "MEETING_NUMBER": "5",
+    "DAY": "08",
+    "MONTH": "June",
+    "YEAR": "2026",
+    "PLANNED_START_TIME": "2:14 PM",
+    "PLANNED_END_TIME": "2:15 PM",
+    "ACTUAL_END_TIME": "2:15 PM",
+    "LOCATION": "MS Teams",
+    "PREPARED_BY": "Mark Graham",
+    "REVIEWED_BY": "Pending",
+    "matters": [
+        {
+            "topic": "XYZ Item",
+            "description": "Mark Graham updated the team on the XYZ integration. Pending final review.",
+            "action_by": "Equity Markets",
+            "deadline": "12 June 2026",
+            "status": "Open"
+        }
+    ],
+    "scorecards": [
+        {
+            "topic": "System Architecture",
+            "description": "No blockers currently identified."
+        }
+    ],
+    "endorsements": [
+        {
+            "description": "Approval to proceed with Phase 2 deployment."
+        }
+    ]
+}
