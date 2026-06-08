@@ -27,7 +27,7 @@ def process_attendance(teams_csv_path, directory_csv_path):
         f.writelines(participant_lines)
         
     # Read the clean participant block and the master directory
-    df_teams = pd.read_csv(temp_path, sep='\t')
+    df_teams = pd.read_csv(temp_path, sep='\t', encoding='utf-16')
     df_dir = pd.read_csv(directory_csv_path)
     
     # Clean the Email column in Teams output (often comes out weird)
