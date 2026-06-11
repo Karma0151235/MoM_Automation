@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 from docxtpl import DocxTemplate
+from debug import thorough_clean_runs
 
 def process_attendance(teams_csv_path, directory_csv_path):
     """
@@ -68,6 +69,8 @@ def main():
     # 4. Render the Word Document
     print("Rendering MoM template...")
     doc = DocxTemplate(template_path)
+    doc.get_docx()
+    thorough_clean_runs(doc)
     doc.render(context)
     doc.save(output_path)
     
