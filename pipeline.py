@@ -26,9 +26,19 @@ def process_attendance(teams_csv_path, directory_csv_path):
     temp_path = "temp_participants.csv"
     with open(temp_path, 'w', encoding='utf-16') as f:
         f.writelines(participant_lines)
-        
+    
+    ## NEW HEURISTIC: Truncate dataframe at the first NaN in Email
     # Read the clean participant block and the master directory
     df_teams = pd.read_csv(temp_path, sep='\t', encoding='utf-16')
+
+    invalid_rows = df_teams[df_teams['Email'].isna()]
+    if not invalid_rows.empty:
+        cutoff_index = invalid_rows.index[0]
+        df_teams = df_teams.iloc[:cutoff_index]
+    
+    # Clean the Email columns for a deterministic join
+    df_teams['Email'] = df_teams['Email'].str.strip().str.lower()
+
     df_dir = pd.read_csv(directory_csv_path)
     
     # Clean the Email column in Teams output (often comes out weird)
