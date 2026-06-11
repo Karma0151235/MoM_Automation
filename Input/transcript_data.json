@@ -19,12 +19,23 @@
             "action_by": "Equity Markets",
             "deadline": "12 June 2026",
             "status": "Open"
+        },
+        {
+            "topic": "ABC Item",
+            "description": "Jane Doe presented the ABC project status. No blockers identified.",
+            "action_by": "Project Management",
+            "deadline": "15 June 2026",
+            "status": "Open"
         }
     ],
     "scorecards": [
         {
             "topic": "System Architecture",
             "description": "No blockers currently identified."
+        },
+        {
+            "topic": "Project Timeline",
+            "description": "On track with the current timeline."
         }
     ],
     "endorsements": [
