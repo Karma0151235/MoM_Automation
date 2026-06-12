@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import json
 from docxtpl import DocxTemplate
@@ -63,6 +64,7 @@ def main():
     template_path = "Templates/MoM_Template_PSC.docx"
     json_data_path = "Input_PSC/transcript_data.json"
     output_path = "Output_PSC/MoM_PSC.docx"
+    file_to_delete = "temp_participants.csv"
 
     # 1. Process Deterministic Data (Attendance)
     print("Processing attendance data...")
@@ -85,6 +87,9 @@ def main():
     doc.save(output_path)
     
     print(f"Success! Document saved to {output_path}")
+    if os.path.exists(file_to_delete):
+        os.remove(file_to_delete)
+    print(f"Cleaned up temporary file: {file_to_delete}")
 
 if __name__ == "__main__":
     main()
