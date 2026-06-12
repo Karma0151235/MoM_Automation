@@ -58,11 +58,11 @@ def process_attendance(teams_csv_path, directory_csv_path):
 
 def main():
     # File Paths
-    teams_csv = "Input/Meeting ABC UpdateCommittee DEF #5 - Attendance report 6-08-26.csv"
-    master_dir = "Input/directory.csv"
-    template_path = "MoM_Template.docx"
-    json_data_path = "Input/transcript_data.json"
-    output_path = "Output/Final_MoM_Document.docx"
+    teams_csv = "Input_PSC/Meeting ABC UpdateCommittee DEF #5 - Attendance report 6-08-26.csv"
+    master_dir = "Input_PSC/directory.csv"
+    template_path = "Templates/MoM_Template_PSC.docx"
+    json_data_path = "Input_PSC/transcript_data.json"
+    output_path = "Output_PSC/MoM_PSC.docx"
 
     # 1. Process Deterministic Data (Attendance)
     print("Processing attendance data...")
