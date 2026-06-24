@@ -19,13 +19,14 @@ A Python-based data pipeline that isolates unstructured NLP parsing from tabular
 
 ## 2. Execution Guide
 
-### Dependencies
+### 2.1 Dependencies
 Ensure the environment contains the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-### Required File Structure
+### 2.2 Required File Structure
+```bash
 ├── Input/
 │   ├── directory.csv                 # Master directory (Name, Email, Designation, Abbrev)
 │   ├── Teams_Attendance.csv          # Raw UTF-16 export from MS Teams
@@ -33,8 +34,9 @@ pip install -r requirements.txt
 ├── MoM_Template.docx                 # Target Word document mapped with Jinja2 tags
 ├── debug.py                          # XML artifact cleanup functions
 └── pipeline.py                       # Main orchestration script
+```
 
-### Process Flow
+### 2.3 Process Flow
 Execute the POC script:
 ```bash
 python PSC.py
@@ -44,7 +46,7 @@ python PSC.py
 3. **Render & Clean**: Opens the `.docx`, executes a backward-iterating cleanup of fractured XML text runs (via `debug.py`), and renders the variables.
 4. **Output**: The final synthesized document is generated at `Output/Final_MoM_Document.docx`.
 
-## Strategic Roadmap
+## 3. Strategic Roadmap
 
 To transition this POC into a production-grade enterprise application, the following modules must be engineered:
 
